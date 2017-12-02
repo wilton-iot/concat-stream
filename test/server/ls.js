@@ -1,4 +1,5 @@
-var concat = require('../../')
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var concat = require('concat-stream/../')
 var spawn = require('child_process').spawn
 var exec = require('child_process').exec
 var test = require('tape')
@@ -14,3 +15,5 @@ test('ls command', function (t) {
     })
   )
 })
+
+require = requireOrig;});

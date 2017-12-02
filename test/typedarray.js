@@ -1,5 +1,6 @@
-var concat = require('../')
-var test = require('tape')
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var concat = require('concat-stream')
+var test = require('tape-compat')
 var TA = require('typedarray')
 var U8 = typeof Uint8Array !== 'undefined' ? Uint8Array : TA.Uint8Array
 
@@ -31,3 +32,5 @@ test('typed array from strings, buffers, and arrays', function (t) {
   arrays.write(new Buffer(' fg '))
   arrays.end([ 120, 121, 122 ])
 })
+
+require = requireOrig;});

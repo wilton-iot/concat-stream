@@ -1,5 +1,6 @@
-var concat = require('../')
-var test = require('tape')
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var concat = require('concat-stream')
+var test = require('tape-compat')
 
 test('no callback stream', function (t) {
   var stream = concat()
@@ -23,3 +24,5 @@ test('encoding set to string, no data', function (t) {
   })
   stream.end()
 })
+
+require = requireOrig;});

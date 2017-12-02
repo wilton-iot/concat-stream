@@ -50,5 +50,12 @@
       "iphone/6.0..latest",
       "android-browser/4.2..latest"
     ]
+  },
+  "wilton": {
+    "excludes": [
+      "test",
+      "collaborators.md",
+      "readme.md"
+    ]
   }
 }

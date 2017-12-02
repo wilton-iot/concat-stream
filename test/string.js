@@ -1,5 +1,6 @@
-var concat = require('../')
-var test = require('tape')
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var concat = require('concat-stream')
+var test = require('tape-compat')
 var TA = require('typedarray')
 var U8 = typeof Uint8Array !== 'undefined' ? Uint8Array : TA.Uint8Array
 
@@ -85,3 +86,5 @@ test('to string numbers', function (t) {
   write.write(1000)
   write.end()
 })
+
+require = requireOrig;});

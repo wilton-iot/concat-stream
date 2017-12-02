@@ -1,5 +1,6 @@
-var concat = require('../')
-var test = require('tape')
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var concat = require('concat-stream')
+var test = require('tape-compat')
 
 test('writing objects', function (t) {
   var stream = concat({encoding: "objects"}, concatted)
@@ -27,3 +28,5 @@ test('switch to objects encoding if no encoding specified and objects are writte
   stream.end()
   t.end()
 })
+
+require = requireOrig;});

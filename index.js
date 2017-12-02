@@ -1,3 +1,4 @@
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var Writable = require('readable-stream').Writable
 var inherits = require('inherits')
 
@@ -141,3 +142,5 @@ function u8Concat (parts) {
   }
   return u8
 }
+
+require = requireOrig;});

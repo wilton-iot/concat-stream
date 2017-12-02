@@ -1,5 +1,6 @@
-var concat = require('../')
-var test = require('tape')
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
+var concat = require('concat-stream')
+var test = require('tape-compat')
 
 test('array stream', function (t) {
   t.plan(1)
@@ -10,3 +11,5 @@ test('array stream', function (t) {
   arrays.write([4,5,6])
   arrays.end()
 })
+
+require = requireOrig;});
