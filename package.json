@@ -55,7 +55,8 @@
     "excludes": [
       "test",
       "collaborators.md",
-      "readme.md"
+      "readme.md",
+      "test.js"
     ]
   }
 }
